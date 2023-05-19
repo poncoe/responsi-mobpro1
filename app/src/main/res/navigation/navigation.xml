@@ -30,7 +30,11 @@
         android:id="@+id/fragmentKedua"
         android:name="id.poncoe.responsimobpro.FragmentKedua"
         android:label="Fragment Kedua"
-        tools:layout="@layout/fragment_kedua" />
+        tools:layout="@layout/fragment_kedua" >
+        <argument
+            android:name="nama"
+            app:argType="string" />
+    </fragment>
     <fragment
         android:id="@+id/fragmentKetiga"
         android:name="id.poncoe.responsimobpro.FragmentKetiga"

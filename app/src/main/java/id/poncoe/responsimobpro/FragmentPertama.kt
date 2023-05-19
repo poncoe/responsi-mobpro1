@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import id.poncoe.responsimobpro.databinding.FragmentPertamaBinding
 
 class FragmentPertama: Fragment() {
@@ -25,6 +26,8 @@ class FragmentPertama: Fragment() {
     }
 
     fun pindahHalaman(){
-        val nama = binding.inputNama.text.toString() // Coedotz
+        val nama = binding.inputNama.text.toString() // contoh input : Coedotz
+        val passData = FragmentPertamaDirections.actionFragmentPertamaToFragmentKedua(nama)
+        findNavController().navigate(passData)
     }
 }
