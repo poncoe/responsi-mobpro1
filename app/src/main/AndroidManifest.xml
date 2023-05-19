@@ -12,6 +12,9 @@
         android:theme="@style/Theme.BuildYourFirstApp"
         tools:targetApi="31">
         <activity
+            android:name=".ActivityKetiga"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -20,6 +23,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ActivityPertama"
+            android:exported="true"></activity>
+        <activity
+            android:name=".ActivityKedua"
+            android:exported="true"></activity>
     </application>
 
 </manifest>

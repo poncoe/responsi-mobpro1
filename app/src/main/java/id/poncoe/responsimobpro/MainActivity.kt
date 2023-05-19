@@ -1,5 +1,6 @@
 package id.poncoe.responsimobpro
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.core.view.isVisible
@@ -14,19 +15,18 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.btnGo.setOnClickListener { letGo() }
+        binding.btnPertama.setOnClickListener { halamanPertama() }
+        binding.btnKedua.setOnClickListener { halamanKedua() }
     }
 
-    fun letGo(){
-        val bil1 = binding.inputBil1.text.toString()
-        val bil2 = binding.inputBil2.text.toString()
-        val hasil = bil1.toInt() * bil2.toInt()
-
-        binding.txtHasil.isVisible = true
-        binding.txtHasil.text = hasil.toString() // muncul kalkulasi perhitungan.
-
-        val nama = binding.inputNama.text.toString()
-        binding.txtNama.isVisible = true
-        binding.txtNama.text = nama // muncul nama
+    fun halamanPertama(){
+        val intent = Intent(this, ActivityPertama::class.java)
+        startActivity(intent)
     }
+
+    fun halamanKedua(){
+        val intent = Intent(this, ActivityKedua::class.java)
+        startActivity(intent)
+    }
+
 }
