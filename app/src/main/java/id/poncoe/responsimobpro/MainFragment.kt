@@ -21,16 +21,7 @@ class MainFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        binding.btnPertama.setOnClickListener { halamanPertama() }
-        binding.btnKedua.setOnClickListener { halamanKetiga() }
-    }
 
-    fun halamanPertama(){
-        findNavController().navigate(R.id.action_mainFragment_to_fragmentPertama) // Main --> Layout Pertama
-    }
-
-    fun halamanKetiga(){
-        findNavController().navigate(R.id.action_mainFragment_to_fragmentKetiga) // Main --> Layout ketiga
     }
 
 }
