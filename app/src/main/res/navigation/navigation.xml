@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="id.poncoe.responsimobpro.MainFragment"
+        android:label="Activity to Fragment"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_mainFragment_to_fragmentPertama"
+            app:destination="@id/fragmentPertama" />
+        <action
+            android:id="@+id/action_mainFragment_to_fragmentKetiga"
+            app:destination="@id/fragmentKetiga" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentPertama"
+        android:name="id.poncoe.responsimobpro.FragmentPertama"
+        android:label="Fragment Pertama"
+        tools:layout="@layout/fragment_pertama" >
+        <action
+            android:id="@+id/action_fragmentPertama_to_fragmentKedua"
+            app:destination="@id/fragmentKedua" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentKedua"
+        android:name="id.poncoe.responsimobpro.FragmentKedua"
+        android:label="Fragment Kedua"
+        tools:layout="@layout/fragment_kedua" />
+    <fragment
+        android:id="@+id/fragmentKetiga"
+        android:name="id.poncoe.responsimobpro.FragmentKetiga"
+        android:label="Fragment Ketiga"
+        tools:layout="@layout/fragment_ketiga" />
+</navigation>
