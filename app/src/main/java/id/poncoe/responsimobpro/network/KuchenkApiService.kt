@@ -29,7 +29,7 @@ object KuchenkApi {
     }
 
     fun getKuchenkUrl(gambar: String): String {
-        return "$BASE_URL$gambar.jpg"
+        return "$BASE_URL$gambar"
     }
 }
 
